@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cove & Ellen - Coastal Clothing Brand
+
+A beautiful development website for Cove & Ellen, a coastal clothing brand that embodies timeless elegance and sustainable fashion.
+
+## Features
+
+- **Modern Tech Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Brand-Focused Aesthetic**: Coastal-inspired design with cream, navy, and sand color palette
+- **Typography**: Elegant serif headings (Cormorant Garamond) and clean sans-serif body text (Inter)
+- **Pages**:
+  - Homepage with hero section and brand introduction
+  - Collection page with product grid
+  - About page with brand story
+  - Contact page with contact form and studio information
 
 ## Getting Started
 
-First, run the development server:
-
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design Philosophy
 
-## Learn More
+The site captures the "Toast meets White Company by the seaside" aesthetic with:
+- Generous white space
+- Large hero images
+- Minimal text overlays
+- Clean, intuitive navigation
+- Understated elegance throughout
 
-To learn more about Next.js, take a look at the following resources:
+## Build & Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is a development showcase site focused on aesthetic and brand presentation.
