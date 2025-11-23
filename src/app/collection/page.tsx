@@ -7,7 +7,7 @@ export default function Collection() {
       name: 'Linen Dresses', 
       href: '/shop/linen-dresses',
       description: 'Effortless elegance for every coastal moment',
-      items: 6
+      items: 1
     },
     { 
       name: 'Linen Two-Pieces', 
@@ -25,7 +25,7 @@ export default function Collection() {
       name: 'Linen Tops', 
       href: '/shop/linen-tops',
       description: 'Lightweight essentials for warm weather',
-      items: 6
+      items: 2
     },
     { 
       name: 'Linen Shirt/Blouse', 
@@ -49,8 +49,20 @@ export default function Collection() {
       image: '/items/dress.jpg',
       description: 'Effortless coastal elegance with halter neckline'
     },
-    { name: 'Wide-Leg Trousers', price: '£125', description: 'Flowing comfort for any occasion' },
-    { name: 'Linen Button Shirt', price: '£89', description: 'Effortless elegance in soft linen' }
+    { 
+      name: 'Leaf Detail Linen Top', 
+      price: '£105', 
+      href: '/shop/linen-tops/leaf-detail-linen-top',
+      image: '/items/pastel-olive2.jpg',
+      description: 'Handcrafted botanical details, timeless elegance'
+    },
+    { 
+      name: 'Embroidered Sage Top', 
+      price: '£115', 
+      href: '/shop/linen-tops/embroidered-sage-top',
+      image: '/items/sage-embroidered-top-1.jpg',
+      description: 'Relaxed fit with delicate leaf embroidery'
+    }
   ]
 
   return (
@@ -79,9 +91,27 @@ export default function Collection() {
               >
                 <div className="bg-cream border border-sand/30 rounded-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <div className="relative aspect-[4/3] bg-sand/20">
-                    <div className="absolute inset-0 flex items-center justify-center text-navy/40 font-sans text-sm">
-                      [{category.name} preview]
-                    </div>
+                    {category.name === 'Linen Tops' ? (
+                      <Image
+                        src="/items/sage-embroidered-top-1.jpg"
+                        alt="Linen Tops Collection"
+                        fill
+                        className="object-cover"
+                        quality={95}
+                      />
+                    ) : category.name === 'Linen Dresses' ? (
+                      <Image
+                        src="/items/dress.jpg"
+                        alt="Linen Dresses Collection"
+                        fill
+                        className="object-cover"
+                        quality={95}
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-navy/40 font-sans text-sm">
+                        [{category.name} preview]
+                      </div>
+                    )}
                     <div className="absolute inset-0 bg-navy/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   

@@ -30,8 +30,8 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'Linen Halter Dress', price: '£145', category: 'Dresses', href: '/shop/linen-dresses/halter-dress' },
-                { name: 'Wide-Leg Pants', price: '£125', category: 'Bottoms' },
-                { name: 'Linen Shirt', price: '£89', category: 'Tops' }
+                { name: 'Embroidered Sage Top', price: '£115', category: 'Tops', href: '/shop/linen-tops/embroidered-sage-top' },
+                { name: 'Leaf Detail Linen Top', price: '£105', category: 'Tops', href: '/shop/linen-tops/leaf-detail-linen-top' }
               ].map((item, index) => {
                 const content = (
                   <>
@@ -40,6 +40,22 @@ export default function Home() {
                         <Image
                           src="/items/dress.jpg"
                           alt="Linen Halter Dress"
+                          fill
+                          className="object-cover"
+                          quality={95}
+                        />
+                      ) : item.name === 'Embroidered Sage Top' ? (
+                        <Image
+                          src="/items/sage-embroidered-top-1.jpg"
+                          alt="Embroidered Sage Top"
+                          fill
+                          className="object-cover"
+                          quality={95}
+                        />
+                      ) : item.name === 'Leaf Detail Linen Top' ? (
+                        <Image
+                          src="/items/pastel-olive2.jpg"
+                          alt="Leaf Detail Linen Top"
                           fill
                           className="object-cover"
                           quality={95}

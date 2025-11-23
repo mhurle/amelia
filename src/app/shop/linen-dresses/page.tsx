@@ -1,14 +1,24 @@
 import CategoryHeader from '@/components/CategoryHeader'
 import Link from 'next/link'
+import Image from 'next/image'
+
+interface Product {
+  name: string
+  price: string
+  description: string
+  href?: string
+  image?: string
+}
 
 export default function LinenDresses() {
-  const products = [
-    { name: 'Linen Halter Dress', price: '£145', description: 'Effortless coastal elegance with halter neckline', href: '/shop/linen-dresses/halter-dress' },
-    { name: 'Wrap Dress', price: '£135', description: 'Flattering fit, timeless style' },
-    { name: 'Linen Shirt Dress', price: '£125', description: 'Relaxed comfort, refined cut' },
-    { name: 'Sleeveless Maxi Dress', price: '£165', description: 'Flowing grace for warm days' },
-    { name: 'Button-Front Dress', price: '£155', description: 'Classic details, modern ease' },
-    { name: 'A-Line Midi Dress', price: '£140', description: 'Feminine silhouette, everyday luxury' }
+  const products: Product[] = [
+    { 
+      name: 'Linen Halter Dress', 
+      price: '£145', 
+      description: 'Effortless coastal elegance with halter neckline', 
+      href: '/shop/linen-dresses/halter-dress',
+      image: '/items/dress.jpg'
+    }
   ]
 
   return (
@@ -25,9 +35,19 @@ export default function LinenDresses() {
               const content = (
                 <>
                   <div className="relative aspect-[3/4] bg-cream border border-sand/30 mb-4 rounded-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                    <div className="absolute inset-0 flex items-center justify-center text-navy/40 font-sans text-sm">
-                      [{product.name} image]
-                    </div>
+                    {product.image ? (
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="object-cover"
+                        quality={95}
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-navy/40 font-sans text-sm">
+                        [{product.name} image]
+                      </div>
+                    )}
                     <div className="absolute inset-0 bg-navy/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   
